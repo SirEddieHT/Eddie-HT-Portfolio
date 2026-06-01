@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*Reminder to future self;
+You created a database in Supabase for Vercel projects*/
+:root {
+    --bg-dark: #050505;
+    --card-bg: rgba(15, 15, 20, 0.7); 
+    --neon-purple: #bc13fe;
+    --neon-pink: #ff007f;
+    --neon-blue: #00d4ff;
+    --text-main: #e0e0e0;
+    --text-muted: #888;
+}
+
+/* BACKGROUND */
+#bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background: var(--bg-dark);
+}
+
+/* STYLES */
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+    overflow-x: hidden;
+}
+/* The following code is AI-generated */
+/* --- GLASS CONTAINER (Enhanced Visibility) --- */
+.glass-container {
+    background: var(--card-bg);
+    /* Added saturate to make droplet colors look vivid through the glass */
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px; 
+    width: 100%;
+    max-width: 850px;
+    /* Stronger shadow for a 'floating' effect */
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8), 
+                inset 0 0 10px rgba(255, 255, 255, 0.05);
+    
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.neon-text-purple {
+    color: var(--neon-purple);
+    text-shadow: 0 0 15px var(--neon-purple);
+}
+
+.status-bar {
+    margin-top: 15px;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.neon-line {
+    height: 1px;
+    width: 50px;
+    background: var(--neon-pink);
+    margin-top: 10px;
+    box-shadow: 0 0 10px var(--neon-pink);
+}
+
+.bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+th {
+    text-align: left;
+    color: var(--neon-blue);
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item-name { font-weight: 600; color: #fff; }
+.amount { color: var(--neon-pink); font-weight: 700; font-family: 'Orbitron', sans-serif; }
+.notes { font-size: 0.75rem; color: #777; }
+
+
+footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.total-box {
+    text-align: right;
+}
+
+.total-label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.neon-text-blue {
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+    font-size: 1.8rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* --- IMPROVED ANIMATIONS --- */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.pulse {
+    color: #39ff14;
+    display: inline-block;
+    animation: blink 2s infinite;
+}
+
+@keyframes slideUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- GLOBAL ACTION BUTTON (Works on all devices) --- */
+.action-area {
+    margin: 20px 0;
+    display: block; /* Ensures it takes up its own line */
+}
+
+.neon-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-family: 'Orbitron', sans-serif; /* Switched to match your title font */
+    font-size: 0.8rem;
+    color: #dc90ff; /* The "System Green" looks great for contrast */
+    text-decoration: none;
+    border: 1px solid #cccecc;
+    background: rgba(17, 0, 255, 0.05);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 4px; /* Slight round for a modern engineering look */
+}
+
+.neon-button:hover {
+    background: rgba(98, 0, 255, 0.2);
+    box-shadow: 0 0 15px rgba(85, 0, 197, 0.5), inset 0 0 5px #9102d3;
+    text-shadow: 0 0 5px #960ad6;
+}
+
+.neon-button:active {
+    transform: scale(0.95);
+    background: #821cf7;
+    color: #050505;
+}
+
+/* This section was AI-generated to improve visibility on mobile phones */
+/* MOBILE OPTIMIZATION */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .glass-container { 
+        padding: 25px 15px; 
+        border-radius: 16px;
+        /* Slightly more transparency on mobile to keep drops visible */
+        background: rgba(15, 15, 20, 0.6); 
+    }
+    
+    thead { display: none; }
+    tbody, tr, td { display: block; width: 100%; }
+    
+    tr {
+        margin-bottom: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 5px;
+    }
+    
+    td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+    
+    td:last-child { border-bottom: none; }
+    
+    td::before {
+        content: attr(data-label);
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 700;
+        color: var(--neon-purple);
+        font-size: 0.65rem;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+}

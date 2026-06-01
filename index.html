@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Bills | Lesdie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="bgCanvas">
+    
+</canvas>
+    <div class="glass-container">
+        <header>
+    <h1>Monthly <span class="neon-text-purple">Bills</span></h1>
+    <div class="status-bar">
+        <span class="pulse">●</span> Tracker Active
+    </div>
+    <a href="Portfolio-Eddie/Portfolio-Document-MarioEddieHT.pdf" target="_blank" class="neon-button">Website Tech Specs Document</a>
+    <div class="action-area">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdF1Bs4eJ5Pw0x6pyihkVQj_fT_F1WAoJJqwtE5HscoSz-cjg/viewform?usp=dialog" target="_blank" class="neon-button">
+            Enter Purchase
+        </a>
+    </div>
+
+    <div class="neon-line"></div>
+</header>
+
+        <main>
+            <!-- REMINDER FOR EDDIE: You created a database for Vercel projects with 
+              Supabase and then Neon tech 
+              Also, you created a forms with this link: 
+              https://docs.google.com/forms/d/e/1FAIpQLSdF1Bs4eJ5Pw0x6pyihkVQj_fT_F1WAoJJqwtE5HscoSz-cjg/viewform?usp=publish-editor 
+              -->
+            <table class="bill-table">
+                <thead>
+                    <tr>
+                        <th>Service Item</th>
+                        <th>Amount</th>
+                        <th>Due Date</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Service" class="item-name">Luz</td>
+                        <td data-label="Amount" class="amount">$268</td>
+                        <td data-label="Due Date">04-25-2026</td>
+                        <td data-label="Notes" class="notes">Servicio: 501181103433</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Service" class="item-name">Internet</td>
+                        <td data-label="Amount" class="amount">$750</td>
+                        <td data-label="Due Date">05-05-2026</td>
+                        <td data-label="Notes" class="notes">Sub: 0420372998</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Service" class="item-name">Celular</td>
+                        <td data-label="Amount" class="amount">$699</td>
+                        <td data-label="Due Date">04-27-2026</td>
+                        <td data-label="Notes" class="notes">3325826795</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Service" class="item-name">YouTube</td>
+                        <td data-label="Amount" class="amount">$319</td>
+                        <td data-label="Due Date">04-30-2026</td>
+                        <td data-label="Notes" class="notes">Family Plan</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Service" class="item-name">Others</td>
+                        <td data-label="Amount" class="amount">$1,500 (approx)</td>
+                        <td data-label="Due Date">04-30-2026</td>
+                        <td data-label="Notes" class="notes">Monthly Consumism</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+            <div class="total-box">
+                <span class="total-label">ESTIMATED TOTAL</span>
+                <span class="neon-text-blue">$3,536 <small>MXN</small></span>
+            </div>
+        </footer>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
